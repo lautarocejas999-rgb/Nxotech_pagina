@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-fixed":"#1b1c1c","error-container":"#ffdad6","on-secondary-container":"#656464","surface-container-highest":"#e2e2e2","surface-dim":"#dadada","secondary":"#5f5e5e","inverse-primary":"#00daf3","outline":"#6b7a7d","on-surface-variant":"#3b494c","tertiary-container":"#d1d0d0","surface-container-low":"#f3f3f3","on-secondary":"#ffffff","primary-fixed":"#9cf0ff","surface-container":"#eeeeee","on-tertiary":"#ffffff","on-primary-fixed":"#001f24","tertiary":"#5e5e5e","on-secondary-fixed-variant":"#474646","tertiary-fixed-dim":"#c7c6c6","secondary-container":"#e5e2e1","surface-container-lowest":"#ffffff","primary-container":"#00e5ff","surface":"#f9f9f9","surface-variant":"#e2e2e2","on-background":"#1a1c1c","tertiary-fixed":"#e3e2e2","outline-variant":"#bac9cc","surface-container-high":"#e8e8e8","surface-bright":"#f9f9f9","on-primary-fixed-variant":"#004f58","on-tertiary-container":"#595959","on-error-container":"#93000a","background":"#f9f9f9","on-surface":"#1a1c1c","primary-fixed-dim":"#00daf3","secondary-fixed":"#e5e2e1","on-primary-container":"#00626e","surface-tint":"#006875","on-secondary-fixed":"#1c1b1b","inverse-on-surface":"#f1f1f1","on-tertiary-fixed-variant":"#464747","error":"#ba1a1a","secondary-fixed-dim":"#c9c6c5","on-primary":"#ffffff","inverse-surface":"#2f3131","on-error":"#ffffff","primary":"#006875"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{gutter:"1rem",margin:"1.5rem","space-sm":"0.5rem","space-xl":"2.5rem","space-md":"1rem","space-lg":"1.5rem","margin-mobile":"1rem","space-xs":"0.25rem","gutter-mobile":"0.75rem"},fontFamily:{"headline-lg":["Space Grotesk"],"label-md":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"body-lg":["Inter"],"headline-xl":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-md":["Inter"],"label-lg":["Space Grotesk"],"body-sm":["Inter"],"label-badge":["Space Grotesk"]},fontSize:{"headline-lg":["32px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.03em",fontWeight:"600"}],"headline-xl-mobile":["28px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-lg-mobile":["22px",{lineHeight:"26px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"headline-xl":["40px",{lineHeight:"44px",letterSpacing:"-0.03em",fontWeight:"700"}],"headline-md":["20px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"label-lg":["14px",{lineHeight:"18px",letterSpacing:"0.02em",fontWeight:"700"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"label-badge":["11px",{lineHeight:"12px",letterSpacing:"0.05em",fontWeight:"700"}]}}}};</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}details summary::-webkit-details-marker{display:none;}details summary{list-style:none;}</style></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 pt-safe bg-[#0A0A0A]"><div class="h-7 bg-[#0A0A0A] flex items-center justify-center px-3 overflow-hidden text-center"><p class="text-white font-label-badge text-label-badge uppercase tracking-wider truncate">Envío gratis a todo el país · Garantía en todas tus compras · Pagá en cuotas</p></div><div class="h-16 px-4 bg-surface/90 backdrop-blur-xl flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-2"><button aria-label="Abrir menú" class="w-11 h-11 flex items-center justify-center text-on-surface focus:outline-none" onclick="document.getElementById('mobile-drawer').classList.remove('hidden')" type="button"><span class="material-symbols-outlined">menu</span></button><a class="flex items-center gap-1.5 focus:outline-none" data-path="inicio" href="#"><span class="font-headline-md text-headline-md tracking-tighter text-[#0A0A0A]">NXO</span><span class="font-headline-md text-headline-md text-primary-container tracking-tighter">TECH</span></a></div><div class="flex items-center gap-1"><a aria-label="Buscar" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary" data-path="buscar-productos" href="#"><span class="material-symbols-outlined">search</span></a><a aria-label="Perfil" class="w-11 h-11 flex items-center justify-center text-on-surface" data-path="mi-cuenta" href="#"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></a><a aria-label="Carrito de compras" class="relative w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary" data-path="carrito-de-compras" href="#"><span class="material-symbols-outlined">shopping_bag</span><span class="absolute top-2 right-1.5 min-w-[18px] h-[18px] px-1 rounded-full bg-primary-container text-[#0A0A0A] font-label-badge text-label-badge flex items-center justify-center">2</span></a></div></div></header><div aria-modal="true" class="fixed inset-0 z-50 hidden" id="mobile-drawer" role="dialog"><div class="fixed inset-0 bg-black/50 backdrop-blur-sm" onclick="document.getElementById('mobile-drawer').classList.add('hidden')"></div><div class="fixed top-0 bottom-0 left-0 w-[85%] max-w-sm bg-surface-container-lowest p-6 flex flex-col justify-between shadow-2xl z-10 overflow-y-auto"><div class="space-y-6"><div class="flex items-center justify-between"><div class="flex items-center gap-1"><span class="font-headline-md text-headline-md text-[#0A0A0A]">NXO</span><span class="font-headline-md text-headline-md text-primary-container">TECH</span></div><button class="w-11 h-11 flex items-center justify-center text-on-surface" onclick="document.getElementById('mobile-drawer').classList.add('hidden')"><span class="material-symbols-outlined">close</span></button></div><nav class="flex flex-col space-y-1 font-label-lg text-label-lg"><a class="py-3 px-2 flex items-center justify-between text-on-surface hover:bg-surface-container-low rounded-lg" data-path="categoria-auriculares" href="#" onclick="document.getElementById('mobile-drawer').classList.add('hidden')"><span class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">headphones</span>Auriculares</span><span class="material-symbols-outlined text-outline-variant">chevron_right</span></a><a class="py-3 px-2 flex items-center justify-between text-on-surface hover:bg-surface-container-low rounded-lg" data-path="categoria-parlantes" href="#" onclick="document.getElementById('mobile-drawer').classList.add('hidden')"><span class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">speaker</span>Parlantes</span><span class="material-symbols-outlined text-outline-variant">chevron_right</span></a><a class="py-3 px-2 flex items-center justify-between text-on-surface hover:bg-surface-container-low rounded-lg" data-path="categoria-power-banks" href="#" onclick="document.getElementById('mobile-drawer').classList.add('hidden')"><span class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">battery_charging_full</span>Power Banks</span><span class="material-symbols-outlined text-outline-variant">chevron_right</span></a><a class="py-3 px-2 flex items-center justify-between text-on-surface hover:bg-surface-container-low rounded-lg" data-path="categoria-smartwatch" href="#" onclick="document.getElementById('mobile-drawer').classList.add('hidden')"><span class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">watch</span>Smartwatch</span><span class="material-symbols-outlined text-outline-variant">chevron_right</span></a><a class="py-3 px-2 flex items-center justify-between text-on-surface hover:bg-surface-container-low rounded-lg" data-path="categoria-accesorios" href="#" onclick="document.getElementById('mobile-drawer').classList.add('hidden')"><span class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">cable</span>Accesorios</span><span class="material-symbols-outlined text-outline-variant">chevron_right</span></a><a class="py-3 px-2 flex items-center justify-between text-on-surface hover:bg-surface-container-low rounded-lg" data-path="categoria-combos" href="#" onclick="document.getElementById('mobile-drawer').classList.add('hidden')"><span class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">local_offer</span>Combos Especiales</span><span class="px-2 py-0.5 rounded bg-primary-container text-[#0A0A0A] font-label-badge text-label-badge">HOT</span></a></nav></div><div class="pt-6 border-t border-surface-container-high space-y-3"><div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-primary">verified</span><span>Hardware 100% Oficial en Argentina</span></div></div></div></div><main class="flex-1 flex flex-col relative w-full pt-[92px] pb-24 bg-surface"><div class="hidden">Inicio</div><div class="flex flex-col w-full">
+<!-- 1. HERO SECTION -->
+<section class="relative bg-on-surface text-surface-container-lowest px-4 py-8 overflow-hidden">
+<div class="relative z-10 flex flex-col gap-4">
+<div class="inline-flex items-center gap-2 self-start bg-surface-container-highest/20 backdrop-blur-sm px-2.5 py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-badge text-label-badge tracking-wider uppercase text-surface-container-lowest">NUEVA TEMPORADA TECH 2025</span>
+</div>
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-xl bg-surface-container-highest/10">
+<img class="w-full h-full object-cover" data-alt="A stylish young Argentine creator wearing matte black wireless over-ear headphones while working on an illuminated tech workstation with neon ambient lighting and gadgets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbM_TRpG_1Ta0pgLvjtxvqJ-6Wm7FW29dH-KfP_EWhXZFOYb22rMyfjcd-vZRwOu9BgFVAjHz20XmMLIYjZLM501NXPn6ystK4CLqNkJFaV2h644k9aGamqELyTN1uPyKqhfaLsEH6pGga9LJVELhOT1Ud_uTSbV4bXyRYQUYFhcGhtZOveHA036sXrXgVUXtqAZ6GMTaOUbWKS-8ypjXvqOoLPfPp-EorQa1mOjJyXf1gfnxJBhmW"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/15 backdrop-blur-md text-surface-container-lowest font-label-badge text-label-badge">TESTEADO EN TALLER</span>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-surface font-label-badge text-label-badge">ORIGINAL GARANTIZADO</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-surface-container-lowest tracking-tight">
+          Tu tecnología, al mejor precio
+        </h1>
+<p class="font-body-md text-body-md text-surface-container-highest leading-snug">
+          Auriculares, parlantes y power banks con garantía oficial y envío gratis a la puerta de tu casa.
+        </p>
+</div>
+<div class="pt-2 flex flex-col gap-3">
+<a class="h-12 w-full rounded-lg bg-primary-container hover:bg-inverse-primary text-on-surface flex items-center justify-center font-label-lg text-label-lg uppercase tracking-wider shadow-md transition-all active:scale-[0.98]" href="#mas-vendidos">
+          Ver productos
+        </a>
+<p class="text-center font-body-sm text-body-sm text-surface-container-high flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary-container">local_shipping</span>
+<span>Envíos a todo el país · Compra protegida</span>
+</p>
+</div>
+</div>
+</section>
+<!-- 2. FRANJA DE CONFIANZA -->
+<section class="px-4 py-6">
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex flex-col gap-2">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface leading-snug">Envío gratis</p>
+<p class="font-body-sm text-body-sm text-secondary">A todo el país en compras seleccionadas</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex flex-col gap-2">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">credit_card</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface leading-snug">Cuotas con tarjeta</p>
+<p class="font-body-sm text-body-sm text-secondary">Pagá hasta en 3 o 6 cuotas fijas</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex flex-col gap-2">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface leading-snug">Garantía real</p>
+<p class="font-body-sm text-body-sm text-secondary">Cobertura en todas tus compras</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex flex-col gap-2">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface leading-snug">Atención WhatsApp</p>
+<p class="font-body-sm text-body-sm text-secondary">Soporte directo con personas reales</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. CATEGORÍAS (Carrusel horizontal táctil) -->
+<section class="py-4">
+<div class="px-4 flex items-center justify-between mb-3">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Explorá por categoría</h2>
+<p class="font-body-sm text-body-sm text-secondary">Lo último en hardware para tu setup</p>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">5 SECCIONES</span>
+</div>
+<div class="flex gap-3 overflow-x-auto px-4 pb-2 snap-x snap-mandatory">
+<!-- 1. Auriculares -->
+<a class="snap-start shrink-0 w-36 bg-surface-container-lowest rounded-xl p-2.5 shadow-sm flex flex-col gap-2 group active:scale-95 transition-transform" href="#">
+<div class="w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Modern wireless black matte in-ear headphones inside their compact sleek charging case isolated on clean minimal gray studio setup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOvvDEZdddHH0SvZU9W9GBDjCcnrEHCAcNQYkasOjic53TwH0nHg5m6SqJE7Cedaae9q8gaCPy_GnjUVpRk1ueLXWe1pjYFILiwKnEJj3ntVDPSCx3fzIjSAMCeIJb-xXlEnCYdPZj60xWhm-uAoLiOZTgGSIBTVWnrU15LP_-xHnCzCiSuiYkChHNMISIs0McrBOSjT0f1gy--Ud4Lb97j9vvlHGeVpbetCYVT3WirBISjzMu7WC5"/>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface">Auriculares</span>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</div>
+</a>
+<!-- 2. Parlantes -->
+<a class="snap-start shrink-0 w-36 bg-surface-container-lowest rounded-xl p-2.5 shadow-sm flex flex-col gap-2 group active:scale-95 transition-transform" href="#">
+<div class="w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Rugged portable bluetooth waterproof speaker in tactical dark finish standing on a neutral surface with crisp studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDszOhIaZJkAiU2IRRuf8qmvtPZbH-HpAaqxKADPIx89XS81g15NQFZ58y3R-Ke1dqfE2SyOZnhmXgOUj8nob5kBp83xMjBadxfyTP8m7afrPlrnO_qibMS3l_o-LIawGXXI6ZVIhq8ZYV0FHHbcIKdXV6Knd-ayeXY9_hweLgpswQm3JM762Pr4j6PsgDnGPhk-9Gbg0C7dD-tg8v5wl_OSQ7aNF2Zt4uTUbCJR2HfSeXJczC_fjE3"/>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface">Parlantes</span>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</div>
+</a>
+<!-- 3. Power Banks -->
+<a class="snap-start shrink-0 w-36 bg-surface-container-lowest rounded-xl p-2.5 shadow-sm flex flex-col gap-2 group active:scale-95 transition-transform" href="#">
+<div class="w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Slim high capacity magnetic portable power bank with fast charging display in modern metallic slate gray aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0P27uV-3xF5EzA82rrqKmNNklwojyYl7Cx-ROn260SwzmEjEH1yEeWpM9Q2oeaQiYDpIpyB6pu4gpA6b457eYZZ0on9E_mlwy7cmJ-KD9m80mTNom1yRDVseSSjk1Q24Wsi5RFVLk4h7lnTK4LnPuOGjEsIlrAJYqf38PBZKyzYjKTUFytldOwUUeJaXO3o5xuQNw4TtleKjQJGx8VC9Aq6has-vBLnVoP8B8oLmdoh3Nu7uOo02c"/>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface">Power Banks</span>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</div>
+</a>
+<!-- 4. Smartwatch -->
+<a class="snap-start shrink-0 w-36 bg-surface-container-lowest rounded-xl p-2.5 shadow-sm flex flex-col gap-2 group active:scale-95 transition-transform" href="#">
+<div class="w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="High tech digital smartwatch with dark silicone strap glowing screen showing fitness metrics against a plain gray studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE5ef2htUYAsZN-6HIhyKZCE7oSijHBUPkiX0ew6xbsdBeiCGV4UH9PH2VaMjrcpHDZfQ9T3G9Oi0FpUAHDJ6MYt9C6xJF2I469Eb0WBqOibyW09vgeoNu0GGKtIzinN-iRPqsYVcSRDoroZ52ShJ1hY8jXjIhnmmMMI_pcM2truzhb8hLdbaBh1c8cghCJ1NUAMw2NgtF5WERNIRZLyDphGCqfZdJ5ILt77PSUWhdOQp09_Hxq_0g"/>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface">Smartwatch</span>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</div>
+</a>
+<!-- 5. Accesorios -->
+<a class="snap-start shrink-0 w-36 bg-surface-container-lowest rounded-xl p-2.5 shadow-sm flex flex-col gap-2 group active:scale-95 transition-transform" href="#">
+<div class="w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Reinforced braided USB-C fast charging cable coiled neatly with aluminum connectors on a clean minimalist industrial gray desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApy6u5f07eQahpAsVQ6xFKfm2YjBPZJa1urLMp724u0BrUBdAvuWIfGs3W5nBQ0LPdN0VbXERJDMOKhoq4NX2tXNdCZt_Tuhow6_NMV-yE8zEQvPfAgMuFkDFA4WfuT9lL7IL0EBKbE3M_iK2MSCRQqXW9UTIK1Dk4qMM4pxGDplDr8SP7UivVJ_y5VUaCdgWBu-2HStVUascf7k6MJGfisjS6KpPmlrb0oDvcVvXe1XocawWJuIXk"/>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface">Accesorios</span>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</div>
+</a>
+</div>
+</section>
+<!-- 4. MÁS VENDIDOS -->
+<section class="px-4 py-6" id="mas-vendidos">
+<div class="flex items-end justify-between mb-4">
+<div>
+<div class="inline-flex items-center gap-1 text-primary mb-1">
+<span class="material-symbols-outlined text-[16px]">local_fire_department</span>
+<span class="font-label-badge text-label-badge uppercase tracking-wider">MÁS BUSCADOS</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Los más vendidos</h2>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Stock inmediato</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- Producto 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-sm flex flex-col justify-between">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden mb-2">
+<img class="w-full h-full object-cover" data-alt="Compact black portable bluetooth speaker JBL Go 4 positioned neatly on clean studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpDcGsw9yc6wr-eibBestuKR-cz5w4ake4ZbLgrCd5kzFIDO_4M1einXV29hBFcw5W57QCVrQ8goj5Om-GKK5jinJg1BoH4QGyN6HWZ3qMegTtUjs-Ui4NpNn5-wf7uw9DZMpar2AwEGMpDzBkTTEIsKGsbDhBDvMHnesWybsWhlK5EeiNSNocYn9ITp4B3HY8dYyvnqfGGxh-bGDPfUKZakQKtpjKrtpI-FcuGjGzrODj04wFT8Ef"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-on-surface font-label-badge text-label-badge">20% OFF</span>
+<span class="px-1.5 py-0.5 rounded bg-on-surface text-surface-container-lowest font-label-badge text-label-badge">GRATIS</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 flex-1 justify-between">
+<div>
+<div class="flex items-center gap-1 text-amber-500 mb-0.5">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">4.9</span>
+<span class="font-body-sm text-body-sm text-outline">(142)</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 leading-tight">Parlante Bluetooth JBL Go 4</h3>
+</div>
+<div class="pt-2">
+<span class="font-body-sm text-body-sm text-secondary line-through block">$61.100</span>
+<span class="font-headline-md text-headline-md text-on-surface block leading-none">$48.900</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1">3 cuotas de <strong class="text-on-surface">$16.300</strong></span>
+</div>
+<button class="mt-3 w-full h-10 rounded bg-primary-container hover:bg-inverse-primary text-on-surface font-label-badge text-label-badge uppercase tracking-wider flex items-center justify-center gap-1 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span>Agregar</span>
+</button>
+</div>
+</div>
+<!-- Producto 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-sm flex flex-col justify-between">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden mb-2">
+<img class="w-full h-full object-cover" data-alt="Matte dark gray Xiaomi Redmi AirDots wireless earbuds inside black magnetic charging capsule" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfslUqEYwDx6yHc4EqoEaBiM1p9yXhgAm58YjqRF4WEsUlELFmSVVaZcsxZ9xE__Y8xwd18lH07uaSjQFQKe8KrnjBDodbWFSWhe90_mCfRlOuoB0kxADTLUU8jxe1mNhXEiywv3E74ba5foOU44FguZ-FibDTO5y1LqW1VQUIxHja5dSRFkGmaV8BFcrAiwU6zgctvPD-TKbFXebWt4JCaQ_dh9e4Qg1nFZPThtp4PMXBibrSm6Qt"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-on-surface font-label-badge text-label-badge">20% OFF</span>
+<span class="px-1.5 py-0.5 rounded bg-on-surface text-surface-container-lowest font-label-badge text-label-badge">GRATIS</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 flex-1 justify-between">
+<div>
+<div class="flex items-center gap-1 text-amber-500 mb-0.5">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">4.8</span>
+<span class="font-body-sm text-body-sm text-outline">(380)</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 leading-tight">Auriculares Redmi AirDots</h3>
+</div>
+<div class="pt-2">
+<span class="font-body-sm text-body-sm text-secondary line-through block">$30.600</span>
+<span class="font-headline-md text-headline-md text-on-surface block leading-none">$24.500</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1">3 cuotas de <strong class="text-on-surface">$8.166</strong></span>
+</div>
+<button class="mt-3 w-full h-10 rounded bg-primary-container hover:bg-inverse-primary text-on-surface font-label-badge text-label-badge uppercase tracking-wider flex items-center justify-center gap-1 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span>Agregar</span>
+</button>
+</div>
+</div>
+<!-- Producto 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-sm flex flex-col justify-between">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden mb-2">
+<img class="w-full h-full object-cover" data-alt="Durable high speed 12000mAh external battery power bank with dual USB ports and battery level LED indicators" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWcTFEueKpnSrdUuE4fcafOZCciXk-x2Qt4BA0ynCDtdwhwPo54C10V0a00RdmA78f3hccptg8VjI7PN_iMTD0RJqdVTgN-1WZkKkM7DKFFrHgidwXn8hEVivdL-ifojQGkhkjy1p7_tHqkEVhpBkT_FTXeW1BvV5h3k0iJJmwn-u2qQewannaJsxCSOgaw8rDR_xknm81GhDMfWNThfoC9xQX376pITGPRrN_9NTCOraASXiBzwJx"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-on-surface font-label-badge text-label-badge">20% OFF</span>
+<span class="px-1.5 py-0.5 rounded bg-on-surface text-surface-container-lowest font-label-badge text-label-badge">GRATIS</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 flex-1 justify-between">
+<div>
+<div class="flex items-center gap-1 text-amber-500 mb-0.5">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">4.7</span>
+<span class="font-body-sm text-body-sm text-outline">(89)</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 leading-tight">Batería Portátil 12000mAh</h3>
+</div>
+<div class="pt-2">
+<span class="font-body-sm text-body-sm text-secondary line-through block">$40.000</span>
+<span class="font-headline-md text-headline-md text-on-surface block leading-none">$32.000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1">3 cuotas de <strong class="text-on-surface">$10.666</strong></span>
+</div>
+<button class="mt-3 w-full h-10 rounded bg-primary-container hover:bg-inverse-primary text-on-surface font-label-badge text-label-badge uppercase tracking-wider flex items-center justify-center gap-1 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span>Agregar</span>
+</button>
+</div>
+</div>
+<!-- Producto 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-sm flex flex-col justify-between">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden mb-2">
+<img class="w-full h-full object-cover" data-alt="Premium white noise cancelling wireless AirPods Pro 2 in open wireless charging case on minimal desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVWq5a6PF8emj4XyMwxK3U7QvCjUzLuauNOhFO4zhN-ZR5roi3NjoHOFmGBWE7MaVAkG9HESW1H4aZ7pNHRJwGUhb5GAOtgxWwEAfe5c-j4ZIDOo-ttIDHY6XX_DZf2bnNUVrY-_GwL_2x3PCcCB9W9gv8BPY-GtjLGins3sl6O4mzkfatFaawYFnvI-Qsp1n_73YFprSxWP3cVn69Or718T-ngST7p995cyh4q5fCiJDI_igoDgj0"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-on-surface font-label-badge text-label-badge">20% OFF</span>
+<span class="px-1.5 py-0.5 rounded bg-on-surface text-surface-container-lowest font-label-badge text-label-badge">GRATIS</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 flex-1 justify-between">
+<div>
+<div class="flex items-center gap-1 text-amber-500 mb-0.5">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">5.0</span>
+<span class="font-body-sm text-body-sm text-outline">(210)</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 leading-tight">AirPods Pro 2 Gen</h3>
+</div>
+<div class="pt-2">
+<span class="font-body-sm text-body-sm text-secondary line-through block">$143.750</span>
+<span class="font-headline-md text-headline-md text-on-surface block leading-none">$115.000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1">3 cuotas de <strong class="text-on-surface">$38.333</strong></span>
+</div>
+<button class="mt-3 w-full h-10 rounded bg-primary-container hover:bg-inverse-primary text-on-surface font-label-badge text-label-badge uppercase tracking-wider flex items-center justify-center gap-1 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span>Agregar</span>
+</button>
+</div>
+</div>
+<!-- Producto 5 -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-sm flex flex-col justify-between">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden mb-2">
+<img class="w-full h-full object-cover" data-alt="Magnetic wireless power bank snapped to the back of a contemporary matte black smartphone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5121EQFEMiLhxqGH-KZ1HaFEpNlZvZlk7a3zQqUqqkrleRPS0xoLss06QQTZVGj5FpKA6aF8DV1EFFM3N16RImutrXzCCREviB7zTR0IJXehAdrZxbHvhb_CnPOgJ9KdQjqS9pZG-yaCbt_28yXWaEq6kHTXKrGHMhVH0bU2yj4NQJxyRNMvZW0qeW0KgeQEIJmwrHuWYJIxUj4xQ40E0TPuANaiorptgHd2EMmUlajPiq9KQS7ef"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-on-surface font-label-badge text-label-badge">20% OFF</span>
+<span class="px-1.5 py-0.5 rounded bg-on-surface text-surface-container-lowest font-label-badge text-label-badge">GRATIS</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 flex-1 justify-between">
+<div>
+<div class="flex items-center gap-1 text-amber-500 mb-0.5">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">4.8</span>
+<span class="font-body-sm text-body-sm text-outline">(64)</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 leading-tight">Power Bank Magnético</h3>
+</div>
+<div class="pt-2">
+<span class="font-body-sm text-body-sm text-secondary line-through block">$48.600</span>
+<span class="font-headline-md text-headline-md text-on-surface block leading-none">$38.900</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1">3 cuotas de <strong class="text-on-surface">$12.966</strong></span>
+</div>
+<button class="mt-3 w-full h-10 rounded bg-primary-container hover:bg-inverse-primary text-on-surface font-label-badge text-label-badge uppercase tracking-wider flex items-center justify-center gap-1 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span>Agregar</span>
+</button>
+</div>
+</div>
+<!-- Producto 6 -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-sm flex flex-col justify-between">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden mb-2">
+<img class="w-full h-full object-cover" data-alt="Tactical sleek smartwatch displaying biometric heart rate graph with textured black sports band" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUWk7LXWl5UEcNEkjY16wk7i7kkxCrNo0MROIfhWHVaNrEFdMHT1PxTfzuy7SKeGDX3S-dLXoWf5UHUA3BhaztC08gYa-t2kj0IAb2z0eVyxG_5oO3Te-1keNX5z7WA3Xl5fITEhGtsMEM6cZF9zV7xQ7KX5R3NWsCmLiZzIt3EVl4lEZjEyIVdLtq_WvjmWcWRxArWZBmVqMPhdFC8bpIWvFiRl8MMFxaU5Zi4HhCFsrpQEA7cjIO"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-on-surface font-label-badge text-label-badge">20% OFF</span>
+<span class="px-1.5 py-0.5 rounded bg-on-surface text-surface-container-lowest font-label-badge text-label-badge">GRATIS</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 flex-1 justify-between">
+<div>
+<div class="flex items-center gap-1 text-amber-500 mb-0.5">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">4.9</span>
+<span class="font-body-sm text-body-sm text-outline">(119)</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface line-clamp-2 leading-tight">Smartwatch Reloj Inteligente</h3>
+</div>
+<div class="pt-2">
+<span class="font-body-sm text-body-sm text-secondary line-through block">$56.250</span>
+<span class="font-headline-md text-headline-md text-on-surface block leading-none">$45.000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1">3 cuotas de <strong class="text-on-surface">$15.000</strong></span>
+</div>
+<button class="mt-3 w-full h-10 rounded bg-primary-container hover:bg-inverse-primary text-on-surface font-label-badge text-label-badge uppercase tracking-wider flex items-center justify-center gap-1 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span>Agregar</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. COMBOS (Banner ancho en bloque negro) -->
+<section class="bg-on-surface text-surface-container-lowest px-4 py-8 my-2">
+<div class="flex flex-col gap-1 mb-5">
+<div class="inline-flex items-center gap-1.5 text-primary-container">
+<span class="material-symbols-outlined text-[18px]">package_2</span>
+<span class="font-label-badge text-label-badge uppercase tracking-wider">PACKS CON BENEFICIO EXTRA</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-surface-container-lowest">Armá tu combo y ahorrá</h2>
+<p class="font-body-sm text-body-sm text-surface-container-highest">Llevate el kit completo para el día a día y pagá menos.</p>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Combo 1 -->
+<div class="bg-surface-container-lowest text-on-surface rounded-xl p-4 shadow-lg flex flex-col gap-3">
+<div class="flex items-start justify-between">
+<div>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-surface font-label-badge text-label-badge inline-block mb-1">
+              AHORRÁS $11.400
+            </span>
+<h3 class="font-label-lg text-label-lg text-on-surface">Combo Audio On-The-Go</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-badge text-label-badge">COMBO 01</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+          Parlante JBL Go 4 + Auriculares Redmi AirDots
+        </p>
+<div class="grid grid-cols-2 gap-2 my-1">
+<div class="aspect-video rounded bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="JBL Go 4 bluetooth speaker in black setting close up tech shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxxsfhbxdSIgwox2C6yQTk_9iDjtz9nJwTUi0MNXTSJj9wjbi8DzQK5m8dUwYM4BCG0ynyFZ5FCFBNN-ho46U72YyTaL9OEspjZz52kcgLNMjJRmLH5aYKf9BdIBDc8VfyNaMMH8HY-mZk2bSJlnZulrKW-WanYDufwtCaXamW_yKMx_oI9m_tFJOYXcIDYkFWYmL66cJZ4o6xysirOyXrilf6jK9nUOKfWeTlwXTZyvWVRNFatoum"/>
+</div>
+<div class="aspect-video rounded bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Redmi AirDots wireless case and earbuds on clean surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5j1utKMWmd8uy_bxjdIzTEULvU7-TJtmY0neWphFUWOI8GvOK7gqmbks0BBzWXqVJWfIJNUmB3m-sA43bw5Zgz1k-FiuSX-LE7One2F83iPe5xQDocIW8F_XanYOwkmtqXYJFeeO69scM5EqNFOZJ9Unly_dL9Y5wh6g2xeJOX7Ef2a-6MHG4H7WcZbhBZptF8Es2dtJ8n43L8B7eHMEoPnOn0nfsSrTq9oEAMLzHp2h4s0yz7cNv"/>
+</div>
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<div>
+<span class="font-body-sm text-body-sm text-secondary line-through block leading-tight">$73.400</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold leading-tight">$62.000</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">3 cuotas de $20.666</span>
+</div>
+<button class="w-full h-11 rounded-lg bg-primary-container hover:bg-inverse-primary text-on-surface font-label-lg text-label-lg uppercase tracking-wider flex items-center justify-center gap-2 active:scale-[0.98] transition-transform" type="button">
+<span>Quiero el combo</span>
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</button>
+</div>
+<!-- Combo 2 -->
+<div class="bg-surface-container-lowest text-on-surface rounded-xl p-4 shadow-lg flex flex-col gap-3">
+<div class="flex items-start justify-between">
+<div>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-surface font-label-badge text-label-badge inline-block mb-1">
+              AHORRÁS $9.400
+            </span>
+<h3 class="font-label-lg text-label-lg text-on-surface">Combo Energía &amp; Música</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-badge text-label-badge">COMBO 02</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+          Power Bank Magnético + Auriculares Redmi AirDots
+        </p>
+<div class="grid grid-cols-2 gap-2 my-1">
+<div class="aspect-video rounded bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Magnetic portable battery pack close up detailing magnetic surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXKQF4aTt5Y74b49W9HfqzhpmwsscrWOpFCOoV1zdh4DcrxTobibVsnCwyd8xFzivXa9Fz4sqEhQz7jzbPux3pqSAnaCMrMJdCQdX2V7m8j54BOC-S72jx1mep35y5_VZ9Qsx8r2Yyi_NS8MIcgzY9kkSo1uLvDHJc6-fKPYxj-CBOUnfqk3NUHBN_LJBQYFthiOWLn7o80mNU2Cm1B-AkwLG5hw6j0Uiib9GRiTy9VxCI5W4KvVJs"/>
+</div>
+<div class="aspect-video rounded bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Black wireless earbuds and charging pod set side by side" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdMF8jZntZokRf9qJ0yqF1sl_fai76czkc4f2CZ3n0hNlIlcsvwpYxwKTHCIXcnTk8CPH2dh1nNNI7e8eUPiWgwsxElWhyYUm43OO0ai0xa81op5kSpnqLvK0pWao27Uasy-sVkmnAxoGeMBMIOoc-33MCZpkHtVr3Bx-hfjW8XuAfaK4zWzLfeanCvAQxXVbZTE5wUmeb4UjnQtDvVVIOdg_-rVO1jJNDtV5-slR-b1Q6qv83k_pA"/>
+</div>
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<div>
+<span class="font-body-sm text-body-sm text-secondary line-through block leading-tight">$63.400</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold leading-tight">$54.000</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">3 cuotas de $18.000</span>
+</div>
+<button class="w-full h-11 rounded-lg bg-primary-container hover:bg-inverse-primary text-on-surface font-label-lg text-label-lg uppercase tracking-wider flex items-center justify-center gap-2 active:scale-[0.98] transition-transform" type="button">
+<span>Quiero el combo</span>
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 6. POR QUÉ ELEGIR NXO TECH -->
+<section class="px-4 py-8">
+<div class="mb-5">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">¿Por qué elegir Nxo Tech?</h2>
+<p class="font-body-sm text-body-sm text-secondary">Cero vueltas. Tecnología probada directo a tu puerta.</p>
+</div>
+<div class="flex flex-col gap-3">
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[22px]">flaky</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface">Productos probados</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">Revisamos y testeamos el funcionamiento de cada unidad antes de despacharla a tu domicilio.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[22px]">sync_saved_locally</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface">Garantía real</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">Si algo no funciona o tiene una falla de fábrica, te lo cambiamos de inmediato sin ningún trámite burocrático.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[22px]">chat_spark</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface">Te respondemos rápido</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">Atención directa por WhatsApp con personas de nuestro equipo, sin bots eternos ni mensajes pregrabados.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. OPINIONES DE CLIENTES -->
+<section class="px-4 py-6 bg-surface-container-low/50">
+<div class="flex items-end justify-between mb-4">
+<div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Lo que dicen quienes ya compraron</h2>
+<p class="font-body-sm text-body-sm text-secondary">Experiencias y paquetes recién llegados</p>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Review 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-label-md text-label-md text-on-surface">
+              MR
+            </div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface leading-none">Mateo R.</p>
+<span class="font-body-sm text-body-sm text-outline">Córdoba Capital</span>
+</div>
+</div>
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+          "Pedí el parlante JBL Go 4 un martes y me llegó el jueves al mediodía impecable. Suena tremendo para el tamaño que tiene y se nota que es 100% original."
+        </p>
+<div class="flex items-center gap-2 pt-1 border-t border-surface-container-high">
+<div class="w-10 h-10 rounded bg-surface-container-low overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Customer holding an authentic newly unpacked JBL bluetooth speaker in living room setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPj9Mfvzsi31nao1DfQsgNZMKPbQuUQCNRcF7g-YbNPXuM9mg2Ui71q33dneMxkkPxyG5CUTQcuf6YEeU8c7pRBX6ZUkmQKlrYEB0E2Q5ETuHYDGiSxwNUz_HtsUnGQo6vEHxnxTLEagJGtIKdCfVMqiaza9O3OE7AIuwgioDkx_lPTWaU1-H-aOwKb2-BstY4uGzCufrh49B5GPS5d_lnWFVQeYlndGOMEE-F_gy2C2944pYqsFpa"/>
+</div>
+<div class="min-w-0">
+<span class="font-label-badge text-label-badge text-on-surface truncate block">Parlante Bluetooth JBL Go 4</span>
+<span class="font-body-sm text-body-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Compra verificada
+            </span>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-label-md text-label-md text-on-surface">
+              LM
+            </div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface leading-none">Lucas M.</p>
+<span class="font-body-sm text-body-sm text-outline">Buenos Aires (Vicente López)</span>
+</div>
+</div>
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+          "Me saqué las dudas por WhatsApp antes de pagar y me respondieron en dos minutos. La batería magnética es clave para no quedarme sin carga en el laburo."
+        </p>
+<div class="flex items-center gap-2 pt-1 border-t border-surface-container-high">
+<div class="w-10 h-10 rounded bg-surface-container-low overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Customer tech workspace showing slim magnetic power bank connected to phone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDoC8W_bKZSvOA91hgVuHcW_0prG7MALNowev1Zl24mth59LATov-OoN5ykyecvvqcN_XFtUpQ5QtFi-RqT745kDKZNmYmEaueRGv8YfPdbffPFPKIfkMWMS5S1gUUQTjt7-_mGvW_Jf0zGspE8UNMEec8dEhVJoTPZca4bEh7cPk1p66vOcPXoh7X59E5CtW-LssbZ1i9b9tZhet8xC64ykOV2Jm2OrT9_SQxZBc2RmdHb7j_94LE"/>
+</div>
+<div class="min-w-0">
+<span class="font-label-badge text-label-badge text-on-surface truncate block">Power Bank Magnético 10000mAh</span>
+<span class="font-body-sm text-body-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Compra verificada
+            </span>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-label-md text-label-md text-on-surface">
+              SF
+            </div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface leading-none">Sofía F.</p>
+<span class="font-body-sm text-body-sm text-outline">Rosario, Santa Fe</span>
+</div>
+</div>
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+          "Aproveché el combo de los auris con el parlante y ahorré banda. Llegó todo sellado de fábrica con la garantía en la caja. Súper recomendado."
+        </p>
+<div class="flex items-center gap-2 pt-1 border-t border-surface-container-high">
+<div class="w-10 h-10 rounded bg-surface-container-low overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Unboxing tech combo package on table with earphones and speaker accessories" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnVUXgotIolbvMjSGZCCXX5FnEo2VqkeQ7um1jnwTm7GRURKf4dqlJeFIfIMuhSQkZWxZ9XHcEg-hbb6cNUrxk7lmIltr4TMw8FxpVQxcP8hbOP4kfG1g8sa8ZbubDoHNpmAX4JGwPgpM6QEZvs3S4xlwgaQCAGmKU5l2Nqmb_Fkc_huELsWTGcV0yHf-fQ5I1ytafM5h57hl8PSMCNOWV8ISOCqe-WkizUZ_35gMsGsv7hsfNwa3b"/>
+</div>
+<div class="min-w-0">
+<span class="font-label-badge text-label-badge text-on-surface truncate block">Combo Audio On-The-Go</span>
+<span class="font-body-sm text-body-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Compra verificada
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. CÓMO COMPRAR -->
+<section class="px-4 py-8">
+<div class="mb-5 text-center">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-primary">SIMPLE Y ÁGIL</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mt-1">Cómo comprar en Nxo</h2>
+<p class="font-body-sm text-body-sm text-secondary">Tu próximo gadget en 3 simples pasos</p>
+</div>
+<div class="flex flex-col gap-3">
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-on-surface text-surface-container-lowest flex items-center justify-center font-headline-md text-headline-md shrink-0">
+          1
+        </div>
+<div class="flex-1">
+<h3 class="font-label-lg text-label-lg text-on-surface">Elegí tu producto</h3>
+<p class="font-body-sm text-body-sm text-secondary">Navegá el catálogo, compará especificaciones y agregá al carrito.</p>
+</div>
+<span class="material-symbols-outlined text-outline">devices</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-on-surface text-surface-container-lowest flex items-center justify-center font-headline-md text-headline-md shrink-0">
+          2
+        </div>
+<div class="flex-1">
+<h3 class="font-label-lg text-label-lg text-on-surface">Pagá como quieras</h3>
+<p class="font-body-sm text-body-sm text-secondary">Tarjetas de crédito, débito, transferencia bancaria o Mercado Pago.</p>
+</div>
+<span class="material-symbols-outlined text-outline">payments</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-on-surface text-surface-container-lowest flex items-center justify-center font-headline-md text-headline-md shrink-0">
+          3
+        </div>
+<div class="flex-1">
+<h3 class="font-label-lg text-label-lg text-on-surface">Recibilo en tu casa</h3>
+<p class="font-body-sm text-body-sm text-secondary">Envíos express en 24 a 72hs a todo el país con código de seguimiento en vivo.</p>
+</div>
+<span class="material-symbols-outlined text-outline">local_shipping</span>
+</div>
+</div>
+</section>
+<!-- 9. INSTAGRAM (@nxotech.ar) -->
+<section class="px-4 py-6">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Seguinos en @nxotech.ar</h2>
+<p class="font-body-sm text-body-sm text-secondary">Unboxings, setups reales y lanzamientos</p>
+</div>
+<a class="h-9 px-3 rounded-lg bg-surface-container-lowest shadow-sm text-on-surface font-label-md text-label-md flex items-center gap-1 active:scale-95 transition-transform" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+<span>Ver Instagram</span>
+</a>
+</div>
+<!-- Grilla estética 3x2 -->
+<div class="grid grid-cols-3 gap-2">
+<div class="aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform" data-alt="Aesthetic aesthetic desk setup with RGB backlit mechanical keyboard, mouse, and portable speaker" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhb1SQGxa80reJrm-4QVjU3c0tPmzke9SlTZP7mXUuv2DN8ddp68saQDDgs9222U1CiRu5lfBvlgGaQ5yxyHmeZmk07beeWA8TE5rQtbbaBX1Jbzr6F8EStPzbheEjWvf_c-O4khoF9igMOVwLbBseSy0U3TYTxP13N-Ak9MgqQYukU9jjO4Q-6eHIY9NjPYqsVTHmZv3M5gTrrtTCSpw8kPhNW74kfA8S4tT8EzNB2Zw6QBFu4AOJ"/>
+</div>
+<div class="aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform" data-alt="Young person doing unboxing of authentic headphones on studio tabletop with excitement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBFBSMDaJ6xzvmdEDIhYF5rlX_y7Q3z8HI6NNw9NlIYjOlptpl9W-cyefT67hwH6Oe4HPXRuqM2upZmPuDpAmZC-4QmvejLOVWdS4A8eY356_xbscfTlJ84OXYBkfg8QEEYe0ZQ8ODUjfHFrWJFfAvVB4XV_rOireixmhRQeOFAAdAnXZ03RHeE2sjkPhnTDuMuSljL2v51tMXxAJ42t1-GVxaVaRQHeEzwYsx4vx6XaeVbUyMZoDP"/>
+</div>
+<div class="aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform" data-alt="Close up product photography of compact tactical smartwatch on wrist outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4cDxyWaT7zLDGJrPbinfVTQqsDvQe0jcvvgqnuXyan_ZrOhXSm6M5R_ihPvldJpjgV9qTHiIje0n8w3_lwyY9beJR3RcbmiLUkVxpgreS4ZHtQtvapy3hd8vZJ9R_sskPDAolSheI9F3_Sz3-lW3XK2V8C43IqG3oqQWv1KgrzgR0g0qbww3GZoLDYOmk5efsTptaL0dyGa9R_AMy3pbaNWfHa6Bb6UXqlIVvFjz2fO57I-fMsYQf"/>
+</div>
+<div class="aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform" data-alt="Compact portable bluetooth speaker playing music on rooftop terrace in Buenos Aires sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxm5DQjeTY01Wd3-2joPsca1PIUYJclJOpc2uBEru2qJm4qio0LmKy_T4u95pT840UNRL0CRvAJQoR6reXTwcNZZl7jkuQMVH2kTNSqNmQtCN7SEWsMOnmnZcR_e4pIN3DSH4XaYJMQ9jsTdnImsulXL1erXIrFt62AVZ7Lxn4bf5DaQk_aNnD7FgLpNWo91efeRbRjvOeVm_dk8ntlZ3XL76r-z32n5_ohEpBrUtb_GDEX4ND_qwH"/>
+</div>
+<div class="aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform" data-alt="Minimalist EDC tech everyday carry essentials flatlay with phone, battery pack, earphones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvNrtQTNJlup49VX3-1CDH6sQGrzQhgkq02Isnd6JOJ8oM3ot5U8LZ_m5aTg3ASP2n9dxrSQlG26e7Rjb-2CQbuIc18DQx3SefdwtXLz1FgdnBWGIscl1DVy90veTwbgY26geuUZoEotNJV1mUeESUzj96zntO3MxbrPtSWB-tLa9DEw1srBvh1cuaLfvA4RJY8zLSBuH6pbwH6dHeFRrxNfxShnYtqwmavGxkONDFz0aKe2ROS0yK"/>
+</div>
+<div class="aspect-square rounded-lg bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform" data-alt="Customer unboxing cardboard package from Nxo Tech revealing pristine gadget box with seal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6h-02JNZoiyeTddmMBCpx0UtPHAnx-gtJmufx7ZghSsu93FhT_MC-oydy_QkKdnD_jQOiprMGedFrsTxFCa877zhk-k4ZX11xURwZWJ7R_hmxg2hKG1LkFicFZWLultwW_6x3Sxv8jr_kfh8CX6IZDxW4_1JG6I-rmNMyVw1ZQmU5rQ3__PTfl1vhNAfOwuuE0ekJFqgRMN9VMIMVR0haocs_QON0BBMLP8m_GPSk8e4Qk5Z29Rqa"/>
+</div>
+</div>
+</section>
+<!-- 10. PREGUNTAS FRECUENTES -->
+<section class="px-4 py-8">
+<div class="mb-5">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Preguntas Frecuentes</h2>
+<p class="font-body-sm text-body-sm text-secondary">Todo lo que necesitás saber antes de tu compra</p>
+</div>
+<div class="flex flex-col gap-2.5" id="faq-accordion">
+<!-- FAQ 1 -->
+<details class="group bg-surface-container-lowest rounded-xl shadow-sm p-4 cursor-pointer transition-all">
+<summary class="flex items-center justify-between font-label-lg text-label-lg text-on-surface">
+<span>¿Cuánto tarda el envío?</span>
+<span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform text-[20px]">expand_more</span>
+</summary>
+<div class="pt-3 font-body-sm text-body-sm text-secondary leading-relaxed">
+          Despachamos todos los pedidos dentro de las 24 horas hábiles posteriores al pago. A través de correo prioritario, tu paquete llega en 24 a 72hs hábiles a AMBA y en 2 a 5 días hábiles al resto de Argentina.
+        </div>
+</details>
+<!-- FAQ 2 -->
+<details class="group bg-surface-container-lowest rounded-xl shadow-sm p-4 cursor-pointer transition-all">
+<summary class="flex items-center justify-between font-label-lg text-label-lg text-on-surface">
+<span>¿Qué medios de pago aceptan?</span>
+<span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform text-[20px]">expand_more</span>
+</summary>
+<div class="pt-3 font-body-sm text-body-sm text-secondary leading-relaxed">
+          Aceptamos todas las tarjetas de crédito y débito a través de Mercado Pago, cuotas sin interés en productos seleccionados, y transferencia bancaria directa con un 10% de descuento automático.
+        </div>
+</details>
+<!-- FAQ 3 -->
+<details class="group bg-surface-container-lowest rounded-xl shadow-sm p-4 cursor-pointer transition-all">
+<summary class="flex items-center justify-between font-label-lg text-label-lg text-on-surface">
+<span>¿Cómo funciona la garantía?</span>
+<span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform text-[20px]">expand_more</span>
+</summary>
+<div class="pt-3 font-body-sm text-body-sm text-secondary leading-relaxed">
+          Todos los artículos cuentan con garantía oficial de 3 a 6 meses. Si el producto presenta algún desperfecto técnico o falla de fabricación, gestionamos el cambio directo sin vueltas ni demoras.
+        </div>
+</details>
+<!-- FAQ 4 -->
+<details class="group bg-surface-container-lowest rounded-xl shadow-sm p-4 cursor-pointer transition-all">
+<summary class="flex items-center justify-between font-label-lg text-label-lg text-on-surface">
+<span>¿Puedo cambiar o devolver un producto?</span>
+<span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform text-[20px]">expand_more</span>
+</summary>
+<div class="pt-3 font-body-sm text-body-sm text-secondary leading-relaxed">
+          Sí, tenés 10 días corridos a partir del momento en que recibís el paquete para solicitar cambio o devolución. El producto debe encontrarse sin uso y en su packaging original con todos sus accesorios.
+        </div>
+</details>
+<!-- FAQ 5 -->
+<details class="group bg-surface-container-lowest rounded-xl shadow-sm p-4 cursor-pointer transition-all">
+<summary class="flex items-center justify-between font-label-lg text-label-lg text-on-surface">
+<span>¿Los productos son originales?</span>
+<span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform text-[20px]">expand_more</span>
+</summary>
+<div class="pt-3 font-body-sm text-body-sm text-secondary leading-relaxed">
+          Totalmente. Comercializamos hardware 100% original en cajas selladas con número de serie y control de calidad unitario verificado por nuestro equipo técnico especializado.
+        </div>
+</details>
+<!-- FAQ 6 -->
+<details class="group bg-surface-container-lowest rounded-xl shadow-sm p-4 cursor-pointer transition-all">
+<summary class="flex items-center justify-between font-label-lg text-label-lg text-on-surface">
+<span>¿Cómo hago el seguimiento de mi pedido?</span>
+<span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform text-[20px]">expand_more</span>
+</summary>
+<div class="pt-3 font-body-sm text-body-sm text-secondary leading-relaxed">
+          Apenas el paquete sale de nuestro centro logístico, recibís un email y un mensaje por WhatsApp con el enlace directo y el número de tracking para seguir el estado de entrega en tiempo real.
+        </div>
+</details>
+</div>
+</section>
+<!-- 11. SUSCRIPCIÓN (Bloque negro de alto impacto) -->
+<section class="bg-on-surface text-surface-container-lowest px-4 py-8 mb-4">
+<div class="flex flex-col gap-2 mb-4">
+<div class="inline-flex items-center gap-1.5 self-start text-primary-container">
+<span class="material-symbols-outlined text-[18px]">redeem</span>
+<span class="font-label-badge text-label-badge uppercase tracking-wider">BENEFICIO BIENVENIDA</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-surface-container-lowest">
+        10% OFF en tu primera compra
+      </h2>
+<p class="font-body-sm text-body-sm text-surface-container-highest">
+        Dejanos tu email y te mandamos el cupón de descuento al instante para que lo uses hoy.
+      </p>
+</div>
+<form class="flex flex-col gap-2.5" id="newsletter-form" onsubmit="event.preventDefault(); document.getElementById('newsletter-msg').classList.remove('hidden');">
+<div class="relative w-full">
+<input class="w-full h-12 px-4 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none" placeholder="Ingresá tu correo electrónico..." required="" type="email"/>
+</div>
+<button class="w-full h-12 rounded-lg bg-primary-container hover:bg-inverse-primary text-on-surface font-label-lg text-label-lg uppercase tracking-wider flex items-center justify-center gap-2 active:scale-[0.98] transition-transform shadow-md" type="submit">
+<span>Quiero mi descuento</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<div class="hidden p-3 rounded-lg bg-surface-container-highest/20 text-primary-container font-label-md text-label-md text-center" id="newsletter-msg">
+        ¡Listo! Revisá tu casilla de correo, te enviamos el cupón.
+      </div>
+</form>
+</section>
+</div><footer class="w-full bg-[#0A0A0A] text-white mt-12 pb-16"><div class="px-4 py-8 space-y-4"><details class="group border-b border-[#222222] pb-3"><summary class="flex justify-between items-center py-2 cursor-pointer font-label-lg text-label-lg text-white select-none"><span>Categorías</span><span class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180 text-[#888888]">expand_more</span></summary><div class="pt-2 pb-1 flex flex-col space-y-2.5 font-body-sm text-body-sm text-[#AAAAAA]"><a class="hover:text-primary-container" data-path="categoria-auriculares" href="#">Auriculares</a><a class="hover:text-primary-container" data-path="categoria-parlantes" href="#">Parlantes Bluetooth</a><a class="hover:text-primary-container" data-path="categoria-power-banks" href="#">Power Banks &amp; Cargas</a><a class="hover:text-primary-container" data-path="categoria-smartwatch" href="#">Smartwatch</a><a class="hover:text-primary-container" data-path="categoria-accesorios" href="#">Accesorios y Cables</a><a class="hover:text-primary-container" data-path="categoria-combos" href="#">Combos &amp; Promociones</a></div></details><details class="group border-b border-[#222222] pb-3"><summary class="flex justify-between items-center py-2 cursor-pointer font-label-lg text-label-lg text-white select-none"><span>Ayuda y Soporte</span><span class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180 text-[#888888]">expand_more</span></summary><div class="pt-2 pb-1 flex flex-col space-y-2.5 font-body-sm text-body-sm text-[#AAAAAA]"><a class="hover:text-primary-container" href="#">Envíos en el día (AMBA) y País</a><a class="hover:text-primary-container" href="#">Cambios y Devoluciones</a><a class="hover:text-primary-container" href="#">Garantía Oficial Nxo Tech</a><a class="hover:text-primary-container" href="#">Preguntas Frecuentes</a></div></details><details class="group border-b border-[#222222] pb-3"><summary class="flex justify-between items-center py-2 cursor-pointer font-label-lg text-label-lg text-white select-none"><span>Legales</span><span class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180 text-[#888888]">expand_more</span></summary><div class="pt-2 pb-1 flex flex-col space-y-2.5 font-body-sm text-body-sm text-[#AAAAAA]"><a class="hover:text-primary-container" href="#">Términos y Condiciones</a><a class="hover:text-primary-container" href="#">Políticas de Privacidad</a><a class="hover:text-primary-container text-primary-container font-semibold" href="#">Botón de Arrepentimiento</a><a class="hover:text-primary-container" href="#">Defensa del Consumidor</a></div></details><details class="group border-b border-[#222222] pb-3"><summary class="flex justify-between items-center py-2 cursor-pointer font-label-lg text-label-lg text-white select-none"><span>Contacto</span><span class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180 text-[#888888]">expand_more</span></summary><div class="pt-2 pb-1 flex flex-col space-y-2.5 font-body-sm text-body-sm text-[#AAAAAA]"><p class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">chat</span>WhatsApp: +54 9 11 2345-6789</p><p class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">mail</span>soporte@nxotech.com.ar</p><p class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">schedule</span>Lun a Vie: 9:00 a 18:00 hs</p><div class="flex items-center gap-4 pt-2"><span class="font-label-md text-label-md text-white">Instagram: @nxotech.ar</span><span class="font-label-md text-label-md text-white">Facebook: /nxotech.ar</span></div></div></details><div class="pt-4 space-y-3"><p class="font-label-md text-label-md uppercase tracking-wider text-[#888888]">Medios de Pago y Financiación</p><div class="flex flex-wrap gap-2"><span class="px-2.5 py-1 rounded bg-[#1C1C1C] text-white font-label-badge text-label-badge">MERCADO PAGO</span><span class="px-2.5 py-1 rounded bg-[#1C1C1C] text-white font-label-badge text-label-badge">TARJETAS CRÉDITO/DÉBITO</span><span class="px-2.5 py-1 rounded bg-primary-container text-[#0A0A0A] font-label-badge text-label-badge">HASTA 6 CUOTAS SIN INTERÉS</span><span class="px-2.5 py-1 rounded bg-[#1C1C1C] text-white font-label-badge text-label-badge">TRANSFERENCIA 10% OFF</span></div></div><div class="pt-6 border-t border-[#1C1C1C] text-center"><p class="font-body-sm text-body-sm text-[#666666]">Copyright © 2025 Nxo Tech. Todos los derechos reservados.<br/>Buenos Aires, Argentina.</p></div></div></footer></main><a aria-label="Contactar por WhatsApp" class="fixed bottom-24 right-4 z-40 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-transform animate-pulse" href="https://wa.me/5491123456789" rel="noopener noreferrer" target="_blank"><svg class="w-8 h-8 fill-current" viewbox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg></a><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-[#0A0A0A] font-bold"><div class="flex justify-around items-center h-16 px-2"><a aria-current="page" class="flex flex-col items-center justify-center gap-1 w-16 h-12 transition-colors text-[#0A0A0A] font-bold" data-path="inicio" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-md text-label-md">Inicio</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="catalogo-de-productos" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-md text-label-md">Catálogo</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="buscar-productos" href="#"><span class="material-symbols-outlined text-[22px]">search</span><span class="font-label-md text-label-md">Buscar</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="ofertas-y-combos" href="#"><span class="material-symbols-outlined text-[22px]">local_offer</span><span class="font-label-md text-label-md">Ofertas</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="mi-cuenta" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="font-label-md text-label-md">Cuenta</span></a></div></nav></body></html>
